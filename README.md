@@ -4,6 +4,7 @@
 
 # Operationalizing Machine Learning with Azure
 
+
 This is the second project of the Udacity Nanodegree program Machine Learning Engineer with Microsoft Azure.
 
 In this project we configure a cloud-based machine learning production model, deploy it, and consume it.
