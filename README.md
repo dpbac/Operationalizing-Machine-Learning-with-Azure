@@ -28,6 +28,18 @@ For example, one stage for managing models could be "using Automated ML to deter
 ## Key Steps
 *TODO*: Write a short discription of the key steps. Remeber to include all the screenshots required to demonstrate key steps. 
 
+### Step 1: Authenticatication
+
+It was not necessary to perform this step since this project was developed using the VM provided by Udacity. 
+
+By using the lab provide by Udacity, we are not authorized to create a security principal.
+
+### Step 2: Automated ML Experiment
+
+
+
+
+
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
