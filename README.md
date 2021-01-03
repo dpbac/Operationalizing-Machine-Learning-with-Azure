@@ -31,10 +31,6 @@ source: Adapted from Nanodegree Program Machine Learning Engineer with Microsoft
 6. Consume model endpoints
 7. Create and publish a pipeline
 
-
-
-
-
 ## Architectural Diagram
 *TODO*: Provide an architectual diagram of the project and give an introduction of each step. 
 An architectural diagram is an image that helps visualize the flow of operations from start to finish. 
