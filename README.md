@@ -19,14 +19,21 @@ and consume it.
 
 The main steps performed in this project are:
 
-![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/main_steps.JPG)
+![Architectural diagram showing main steps](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/main_steps.JPG)
+source: Adapted from Nanodegree Program Machine Learning Engineer with Microsoft Azure
 
 1.Authentication
+
 2.Automated ML Experiment
+
 3.Deploy the best model
+
 4.Enable logging
+
 5.Swagger Documentation
+
 6.Consume model endpoints
+
 7.Create and publish a pipeline
 
 
