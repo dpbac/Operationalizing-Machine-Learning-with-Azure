@@ -108,7 +108,7 @@ The image bellow shows that `Applicatios Insights` are enabled.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/application_insights_enabled.JPG)
 
-
+Then we can access logs output both at the command line as well as at Azure 
 
 
 
