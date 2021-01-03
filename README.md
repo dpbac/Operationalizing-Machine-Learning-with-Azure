@@ -45,10 +45,30 @@ For example, one stage for managing models could be "using Automated ML to deter
 ### Step 1: Authenticatication
 
 It was not necessary to perform this step since this project was developed using the VM provided by Udacity. 
-
 By using the lab provide by Udacity, we are not authorized to create a security principal.
 
 ### Step 2: Automated ML Experiment
+
+Having security is enabled and authentication is completed at the first step we create an experiment using `Automated ML`, 
+configure a compute cluster, and use that cluster to run the experiment.
+
+In this step we perform the following substeps:
+
+1. Initialize workspace.
+
+To start we need to initialize our workspace and create a Azule ML experiment.
+It is important to asure that the config file is present at `.\config.json`. `config.json` can be downloaded from home of `Azure Machine Learning Studio`
+
+The config.json can be downloaded in the overview of Azure portal.
+
+2. Create an Azure ML experiment
+
+3. Create or Attach an AmlCompute cluster
+
+4. Load Dataset from https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv
+3.
+4.
+
 
 
 
