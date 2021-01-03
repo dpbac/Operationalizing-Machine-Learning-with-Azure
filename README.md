@@ -23,9 +23,8 @@ The main steps performed in this project are:
 deploy it, and consume it.**
 source: Adapted from Nanodegree Program Machine Learning Engineer with Microsoft Azure
 
-1.Authentication
-
-2.Automated ML Experiment
+1. Authentication
+2. Automated ML Experiment
 
 3.Deploy the best model
 
