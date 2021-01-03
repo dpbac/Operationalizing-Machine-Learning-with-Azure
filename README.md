@@ -61,14 +61,31 @@ It is important to asure that the config file is present at `.\config.json`. `co
 
 The config.json can be downloaded in the overview of Azure portal.
 
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/configure_json_edited.JPG)
+**Where to obtain config.json**
+
 2. Create an Azure ML experiment
 3. Create or Attach an AmlCompute cluster
-4. Load Dataset from https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv
+4. Load Dataset from https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv and make sure it is registered.
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/registered_datasets.JPG)
+**Registered datasets.**
+
 5. Retrieve the best model.
+
+When the Azure AutoML experiment is complete, we can retrieve the best model to use in the next step.
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/experiment_completed.JPG)
+**AutoML experiment completed**
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/best_model.JPG)
+**Best model**
+
+From this last image we can see that the best model is `Voting Ensemble` with AUC weighted 0.9463.
 
 ### Step 3: Deploy the best model
 
-
+In this step we select the best model and depoly it. Deploying the Best Model will allow to interact with the HTTP API service and interact with the model by sending data over POST requests.
 
 
 
