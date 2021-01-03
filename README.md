@@ -4,8 +4,7 @@
 
 ## Overview
 
-In this second project of the **Udacity Nanodegree program Machine Learning Engineer with Microsoft Azure** we configure a cloud-based machine learning production model, 
-deploy it, and consume it.
+In this second project of the **Udacity Nanodegree program Machine Learning Engineer with Microsoft Azure** we configure a cloud-based machine learning production model, deploy it, and consume it.
 
 As in the first project we use the `Bank Marketing dataset` which contains data collected during direct marketing campaigns (phone calls) of a Portuguese banking institution. 
 This is a subset of the original public dataset available at [UCI Machine Learning repository]( https://archive.ics.uci.edu/ml/datasets/Bank+Marketing). In this website a detailed 
@@ -20,6 +19,8 @@ and consume it.
 The main steps performed in this project are:
 
 ![Architectural diagram showing main steps](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/main_steps.JPG)
+**Architectural diagram showing main steps performed in order to configure a cloud-based machine learning production model, 
+deploy it, and consume it.**
 source: Adapted from Nanodegree Program Machine Learning Engineer with Microsoft Azure
 
 1.Authentication
