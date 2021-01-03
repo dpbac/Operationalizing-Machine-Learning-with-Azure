@@ -144,10 +144,9 @@ Consume the deployed model using Swagger:
 
 The following image we see that Swagger runs on localhost. There we see the HTTP API methods and responses for the model.
 
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/localhost_json.JPG)
 
-
-
-
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/localhost_swagger03.JPG)
 
 ### Step 6: Consume model endpoints
 
