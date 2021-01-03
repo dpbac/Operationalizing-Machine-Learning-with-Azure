@@ -108,19 +108,62 @@ The image bellow shows that `Applicatios Insights` are enabled.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/application_insights_enabled.JPG)
 
-Then we can access logs output both at the command line as well as at Azure 
+Then we can access logs output both at the command line as well as at Endpoints section in Azure ML Studio.
 
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/logs_command_line.png)
+**Example output logs.py**
 
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/log01.JPG)
+**Output logs at Azure ML Studio**
 
+We can also get insights by checking the performance using the `Applications Insigth url`
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/insights_02.JPG)
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/insights_03.JPG)
 
 
 ### Step 5: Swagger Documentation
+
+In this step, you will consume the deployed model using Swagger. Azure provides a [Swagger](https://swagger.io/) JSON file for deployed models.
+
+Here we will consume the deployed Endpoints. These endpoints allow other services to interact with deployed models.
+
+For this we will use Swagger, a tool that eases the documentation efforts of HTTP APIs. It helps build document and consume RESTful web services.
+
+Azure provides swagger.json for deployed models. This file is used to create a web site that documents the HTTP endpoint for a deployed model.
+
+To start we download the swagger json file for the deployed model. It can be found in Section Endpoints. 
+
+**Important**: Make sure that `swagger.json` is at the same place of `swagger.sh` and `serve.py`.
+
+Consume the deployed model using Swagger:
+
+1. Download the swagger json file for the deployed model (Section Endpoints)
+2. Run swagger.sh and serve.py
+
+The following image we see that Swagger runs on localhost. There we see the HTTP API methods and responses for the model.
+
+
+
 
 
 
 ### Step 6: Consume model endpoints
 
+endpoint.py script runs against the API producing JSON output from the model.
+Apache Benchmark (ab) runs against the HTTP API using authentication keys to retrieve performance results. (optional)
+
 ### Step 7: Create and publish a pipeline
+
+
+
+    The pipeline section of Azure ML studio, showing that the pipeline has been created
+    The Bankmarketing dataset with the AutoML module
+    The “Published Pipeline overview”, showing a REST endpoint and a status of ACTIVE
+
+
+A screenshot of the Jupyter Notebook is included in the submission showing the “Use RunDetails Widget” with the step runs
 
 
 ## Screen Recording
