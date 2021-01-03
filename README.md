@@ -1,18 +1,34 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
-
-
 <img align="left" width="100" height="75" src="https://github.com/dpbac/Optimizing-an-ML-Pipeline-in-Azure/blob/master/images/microsoft-azure-640x401.png">
 
-
 # Operationalizing Machine Learning with Azure
-*TODO:* Write an overview to your project.
 
+## Overview
 
-This is the second project of the Udacity Nanodegree program Machine Learning Engineer with Microsoft Azure.
+In this second project of the **Udacity Nanodegree program Machine Learning Engineer with Microsoft Azure** we configure a cloud-based machine learning production model, 
+deploy it, and consume it.
 
-In this project we configure a cloud-based machine learning production model, deploy it, and consume it.
+As in the first project we use the `Bank Marketing dataset` which contains data collected during direct marketing campaigns (phone calls) of a Portuguese banking institution. 
+This is a subset of the original public dataset available at [UCI Machine Learning repository]( https://archive.ics.uci.edu/ml/datasets/Bank+Marketing). In this website a detailed 
+description of each feature can be found.
 
-CONTINUE
+In the [first project]( https://github.com/dpbac/Optimizing-an-ML-Pipeline-in-Azure) the main goal was to Optimize an Azure ML pipeline Azure ML pipeline using the Python SDK and a 
+provided Scikit-learn model and compare it to an Azure AutoML run.
+
+In this new project we go further and not only obtain the best model using Azure Automated ML, but we configure a cloud-based machine learning production model, deploy it, 
+and consume it.
+
+The main steps performed in this project are:
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/main_steps.JPG)
+
+1.Authentication
+2.Automated ML Experiment
+3.Deploy the best model
+4.Enable logging
+5.Swagger Documentation
+6.Consume model endpoints
+7.Create and publish a pipeline
+
 
 
 
