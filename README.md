@@ -37,8 +37,6 @@ An architectural diagram is an image that helps visualize the flow of operations
 In this case, it has to be related to the completed project, with its various stages that are critical to the overall flow. 
 For example, one stage for managing models could be "using Automated ML to determine the best model". 
 
-
-
 ## Key Steps
 *TODO*: Write a short discription of the key steps. Remeber to include all the screenshots required to demonstrate key steps. 
 
@@ -150,8 +148,11 @@ The following image we see that Swagger runs on localhost. There we see the HTTP
 
 ### Step 6: Consume model endpoints
 
-endpoint.py script runs against the API producing JSON output from the model.
-Apache Benchmark (ab) runs against the HTTP API using authentication keys to retrieve performance results. (optional)
+Once the model is deployed, we use use `scoring_uri` and `key` in `endpoint.py` script so we can interact with the trained model. 
+`endpoint.py` runs against the API producing JSON output from the model (`data.json`).
+
+We also benchmark the endpoint using Apache Benchmark (ab) running `benchmark.sh` against the HTTP API using authentication keys to retrieve performance results.
+
 
 ### Step 7: Create and publish a pipeline
 
