@@ -197,13 +197,13 @@ After training the model we can observe the following with the help of `Use RunD
 [](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/run_details_widget.JPG)
 **Run details**
 
-7. Explore the results.
+**7.** Explore the results.
 Here we retrieve metrics and the best model.
 
-8. Test the best fitted model.
+**8.** Test the best fitted model.
 Then we test the pipeline.
 
-9. Publish and run from REST endpoint
+**9.** Publish and run from REST endpoint
 
 Publishing a pipeline is the process of making a pipeline publicly available. Here we will use Python SDK to publish our pipeline.
 
@@ -212,7 +212,21 @@ The following code publish the pipeline to your workspace. In your workspace in 
 Additionally, publishing a pipeline, a public HTTP endpoint becomes available, allowing other services, including external ones, to interact with an Azure Pipeline.
 
 At `Published Pipeline overview`, we can seea REST endpoint and a status of ACTIVE.
-![]()
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/published_pipeline_active.JPG)
+**Published pipeline active**
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/published_pipeline_overview_RESTPOINT_ACTIVE.JPG)
+**Publish pipeline overview**
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/pipelines_endpoints.JPG)
+**Pipelines endpoints**
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/published_pipeline_schedule_run.JPG)
+**Schedule run**
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/run_details_widget.JPG)
+**Run details of published pipeline**
 
 
 ## Screen Recording
