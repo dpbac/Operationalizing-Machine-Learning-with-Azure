@@ -85,7 +85,12 @@ From this last image we can see that the best model is `Voting Ensemble` with AU
 
 ### Step 3: Deploy the best model
 
-In this step we select the best model and depoly it. Deploying the Best Model will allow to interact with the HTTP API service and interact with the model by sending data over POST requests.
+In this step we select the best model and deploy it using Azure Container Instance (ACI) (see image bellow).
+
+[](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/deploy_model.JPG)
+**Deploying the best model**
+
+Deploying the Best Model will allow to interact with the HTTP API service and interact with the model by sending data over POST requests.
 
 
 
