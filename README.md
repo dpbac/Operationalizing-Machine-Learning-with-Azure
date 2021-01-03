@@ -181,28 +181,27 @@ In this notebook the following steps are performed:
 5. Use AutoMLStep
 
 A pipeline is created using AutoMLStep. 
-![]()
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/pipelines_runs.JPG)
 **Pipeline created**
 
 The pipeline includes all previous steps so we can see again the Bankmarketing dataset with the AutoML module.
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/registered_datasets.JPG)
 **Registered datasets.**
 
-![]()
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/details_dataset.JPG)
 **Details dataset**
 
 6. Train the model using AmlCompute
 
 After training the model we can observe the following with the help of `Use RunDetails Widget`.
-[]()
+[](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/run_details_widget.JPG)
 **Run details**
 
 7. Explore the results.
-Here we test the pipeline and retrieve the best model.
+Here we retrieve metrics and the best model.
 
 8. Test the best fitted model.
-
-In these last steps (7 and 8) we retrieve metrics and the best model.
+Then we test the pipeline.
 
 9. Publish and run from REST endpoint
 
