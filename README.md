@@ -85,17 +85,24 @@ From this last image we can see that the best model is `Voting Ensemble` with AU
 
 ### Step 3: Deploy the best model
 
-In this step we select the best model and deploy it using Azure Container Instance (ACI) (see image bellow).
+In this step we select the best model and deploy it enabling authentication and using Azure Container Instance (ACI) (see image bellow).
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/deploy_model.JPG)
 **Deploying the best model**
+
+![]()
+**Model deployed with success**
 
 Deploying the Best Model will allow to interact with the HTTP API service and interact with the model by sending data over POST requests.
 
 ### Step 4: Enable logging
 
-In this step, we work on the logs.py and enable `Applications insights`. Like this we are able, for instances to fetch logs.
+In this step, we work on the logs.py provided and enable `Applications insights` using Azure SDK. 
 
+This is a very important step since it allows to determine anomalities, irregularities and visualize the performance. 
+
+![]()
+**log.py 
 
 ### Step 5: Swagger Documentation
 
