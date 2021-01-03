@@ -57,7 +57,8 @@ In this step we perform the following substeps:
 1. Initialize workspace.
 
 To start we need to initialize our workspace and create a Azule ML experiment.
-It is important to asure that the config file is present at `.\config.json`. `config.json` can be downloaded from home of `Azure Machine Learning Studio`
+It is important to asure that the config file is present in the current working directory, i.e., at `.\config.json`. 
+`config.json` can be downloaded from home of `Azure Machine Learning Studio`
 
 The config.json can be downloaded in the overview of Azure portal.
 
@@ -161,22 +162,78 @@ The following image shows `endpoint.py` script runs against the API producing JS
 
 In the following image we see the output of the Apache Benchmark.
 
-![]()
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/endpoint_datajson_benchmark_04.JPG)
+
+Here we can see, for instances, that it took 1.540 seconds for all the requests to go through and that there were no failed requests. In addition, it takes in average 154 ms per request which is much less than the limit given by Azure which is 60 seeconds.
 
 ### Step 7: Create and publish a pipeline
 
+At this step we run the [notebook](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/auto-pipelines-with-ml-classification-bank-marketing_01012021_run.ipynb) which creates, publishes and consumes a `Azure Machine Learning Pipeline with AutoMLStep`.
 
+The best model is generated using AutoML for classifcation using the dataset available at https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv
 
-    The pipeline section of Azure ML studio, showing that the pipeline has been created
-    The Bankmarketing dataset with the AutoML module
-    The “Published Pipeline overview”, showing a REST endpoint and a status of ACTIVE
+In this notebook the following steps are performed:
 
+1. Create an `Experiment` in an existing `Workspace`.
+2. Create or Attach existing AmlCompute to a workspace.
+3. Define data loading in a `TabularDataset`.
+4. Configure AutoML using `AutoMLConfig`.
+5. Use AutoMLStep
 
-A screenshot of the Jupyter Notebook is included in the submission showing the “Use RunDetails Widget” with the step runs
+A pipeline is created using AutoMLStep. 
+![]()
+**Pipeline created**
+
+The pipeline includes all previous steps so we can see again the Bankmarketing dataset with the AutoML module.
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/registered_datasets.JPG)
+**Registered datasets.**
+
+![]()
+**Details dataset**
+
+6. Train the model using AmlCompute
+
+After training the model we can observe the following with the help of `Use RunDetails Widget`.
+[]()
+**Run details**
+
+7. Explore the results.
+Here we test the pipeline and retrieve the best model.
+
+8. Test the best fitted model.
+
+In these last steps (7 and 8) we retrieve metrics and the best model.
+
+9. Publish and run from REST endpoint
+
+Publishing a pipeline is the process of making a pipeline publicly available. Here we will use Python SDK to publish our pipeline.
+
+The following code publish the pipeline to your workspace. In your workspace in the portal, you can see metadata for the pipeline including run history and durations. You can also run the pipeline manually from the portal.
+
+Additionally, publishing a pipeline, a public HTTP endpoint becomes available, allowing other services, including external ones, to interact with an Azure Pipeline.
+
+At `Published Pipeline overview`, we can seea REST endpoint and a status of ACTIVE.
+![]()
 
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
 ## Future work
+
+* Try different methods to fight Unbalanced data.
+
+Unbalanced data: 88.80% label `no` and 11.20% label `yes`.
+
+We can apply some techniques on the dataset to make the data more balanced before applying ML. **Automated ML** has built in capabilities to help deal with imbalanced. For instances, the algorithms used by automated ML detect imbalance when the number of samples in the minority class is equal to or fewer than 20% of the number of samples in the majority class, where minority class refers to the one with fewest samples and majority class refers to the one with most samples. Subsequently, AutoML will run an experiment with sub-sampled data to check if using class weights would remedy this problem and improve performance.
+
+For more details, check this [link](https://docs.microsoft.com/en-us/azure/machine-learning/concept-manage-ml-pitfalls).
+
+The following steps were not implemented due to time issues but certainly it would make the project more complete improving performance 
+and expanding possibilities of application (e.g. OMNX support)
+
+* Use a [Parallel Run Step](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-parallel-run-step) in a pipeline.
+* Test a [local container with a downloaded model](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-package-models).
+* Export your model to [support ONNX](https://docs.microsoft.com/en-us/azure/machine-learning/concept-onnx).
+
 
