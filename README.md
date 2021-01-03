@@ -92,10 +92,22 @@ In this step we select the best model and deploy it using Azure Container Instan
 
 Deploying the Best Model will allow to interact with the HTTP API service and interact with the model by sending data over POST requests.
 
+### Step 4: Enable logging
+
+In this step, we work on the logs.py and enable `Applications insights`. Like this we are able, for instances to fetch logs.
+
+
+### Step 5: Swagger Documentation
+
+
+
+### Step 6: Consume model endpoints
+
+### Step 7: Create and publish a pipeline
 
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+## Future work
+
