@@ -25,16 +25,11 @@ source: Adapted from Nanodegree Program Machine Learning Engineer with Microsoft
 
 1. Authentication
 2. Automated ML Experiment
-
-3.Deploy the best model
-
-4.Enable logging
-
-5.Swagger Documentation
-
-6.Consume model endpoints
-
-7.Create and publish a pipeline
+3. Deploy the best model
+4. Enable logging 
+5. Swagger Documentation
+6. Consume model endpoints
+7. Create and publish a pipeline
 
 
 
