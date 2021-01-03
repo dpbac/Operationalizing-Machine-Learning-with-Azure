@@ -28,14 +28,16 @@ source: Adapted from Nanodegree Program Machine Learning Engineer with Microsoft
 3. Deploy the best model
 4. Enable logging 
 5. Swagger Documentation
-6. Consume model endpoints
+6. Consume model endpoints and benchmark endpoints
 7. Create and publish a pipeline
 
 ## Architectural Diagram
-*TODO*: Provide an architectual diagram of the project and give an introduction of each step. 
-An architectural diagram is an image that helps visualize the flow of operations from start to finish. 
-In this case, it has to be related to the completed project, with its various stages that are critical to the overall flow. 
-For example, one stage for managing models could be "using Automated ML to determine the best model". 
+
+The following image shows the key steps listed above with some more detail.
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/architectural_diagram.JPG)
+**Flow of operations of the complete project**
+
 
 ## Key Steps
 *TODO*: Write a short discription of the key steps. Remeber to include all the screenshots required to demonstrate key steps. 
@@ -146,13 +148,20 @@ The following image we see that Swagger runs on localhost. There we see the HTTP
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/localhost_swagger03.JPG)
 
-### Step 6: Consume model endpoints
+### Step 6: Consume model endpoints and benchmark endpoints
 
 Once the model is deployed, we use use `scoring_uri` and `key` in `endpoint.py` script so we can interact with the trained model. 
 `endpoint.py` runs against the API producing JSON output from the model (`data.json`).
 
 We also benchmark the endpoint using Apache Benchmark (ab) running `benchmark.sh` against the HTTP API using authentication keys to retrieve performance results.
 
+The following image shows `endpoint.py` script runs against the API producing JSON output from the model, as well as `benchmark.sh` runs.
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/endpoint_datajson_benchmark.JPG)
+
+In the following image we see the output of the Apache Benchmark.
+
+![]()
 
 ### Step 7: Create and publish a pipeline
 
