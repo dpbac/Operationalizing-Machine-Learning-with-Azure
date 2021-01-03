@@ -62,13 +62,11 @@ It is important to asure that the config file is present at `.\config.json`. `co
 The config.json can be downloaded in the overview of Azure portal.
 
 2. Create an Azure ML experiment
-
 3. Create or Attach an AmlCompute cluster
-
 4. Load Dataset from https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv
-3.
-4.
+5. Retrieve the best model.
 
+### Step 3: Deploy the best model
 
 
 
