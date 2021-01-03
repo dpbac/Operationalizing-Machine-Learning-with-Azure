@@ -90,7 +90,7 @@ In this step we select the best model and deploy it enabling authentication and 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/deploy_model.JPG)
 **Deploying the best model**
 
-![]()
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/model_deploy_succeed.JPG)
 **Model deployed with success**
 
 Deploying the Best Model will allow to interact with the HTTP API service and interact with the model by sending data over POST requests.
@@ -101,8 +101,18 @@ In this step, we work on the logs.py provided and enable `Applications insights`
 
 This is a very important step since it allows to determine anomalities, irregularities and visualize the performance. 
 
-![]()
-**log.py 
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/logspy.JPG)
+**logs.py enabling Applications Insights**
+
+The image bellow shows that `Applicatios Insights` are enabled.
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/application_insights_enabled.JPG)
+
+
+
+
+
+
 
 ### Step 5: Swagger Documentation
 
