@@ -253,7 +253,8 @@ At `Published Pipeline overview`, we can seea REST endpoint and a status of ACTI
 
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+
+https://youtu.be/VQrKx7iRVMo
 
 ## Future work
 
