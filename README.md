@@ -23,6 +23,7 @@ The main steps performed in this project are:
 
 **Fig. 1 - Architectural diagram showing main steps performed in order to configure a cloud-based machine learning production model, 
 deploy it, and consume it.**
+
 source: Adapted from Nanodegree Program Machine Learning Engineer with Microsoft Azure
 
 1. Authentication
