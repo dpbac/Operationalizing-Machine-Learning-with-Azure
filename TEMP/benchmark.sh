@@ -71,4 +71,4 @@
 
 
 
-ab -n 10 -v 4 -p data.json -T 'application/json' -H 'Authorization: Bearer cMnVdfadQaE5ME73h4yRns7cfWlRajAu' http://6e794cf9-c569-44f4-8f33-68d50e8a6fa4.southcentralus.azurecontainer.io/score
+ab -n 10 -v 4 -p data.json -T 'application/json' -H 'Authorization: Bearer HENH9WDxUeJf7MZzXItTyytm9J4jZVbg' http://a9a39422-a82b-4c25-bba9-6ad87b4babd7.southcentralus.azurecontainer.io/score
