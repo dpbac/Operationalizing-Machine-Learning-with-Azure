@@ -89,7 +89,7 @@ From this last image we can see that the best model is `Voting Ensemble` with AU
 In this step we select the best model and deploy it enabling authentication and using Azure Container Instance (ACI) (see image bellow).
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/deploy_model.JPG)
-** Fig. 7 - Deploying the best model.**
+**Fig. 7 - Deploying the best model.**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/model_deploy_succeed.JPG)
 **Fig. 8 - Model deployed with success.**
