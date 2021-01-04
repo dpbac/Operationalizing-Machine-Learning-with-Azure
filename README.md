@@ -254,7 +254,7 @@ At `Published Pipeline overview`, we can seea REST endpoint and a status of ACTI
 
 ## Screen Recording
 
-https://youtu.be/VQrKx7iRVMo
+:video_camera: https://youtu.be/VQrKx7iRVMo
 
 ## Future work
 
