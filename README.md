@@ -181,9 +181,13 @@ The best model is generated using AutoML for classifcation using the dataset ava
 In this notebook the following steps are performed:
 
 **1. Create an `Experiment` in an existing `Workspace`.**
+
 **2. Create or Attach existing AmlCompute to a workspace.**
+
 **3. Define data loading in a `TabularDataset`.**
+
 **4. Configure AutoML using `AutoMLConfig`.**
+
 **5. Use AutoMLStep**
 
 A pipeline is created using AutoMLStep. 
