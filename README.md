@@ -20,6 +20,7 @@ and consume it.
 The main steps performed in this project are:
 
 ![Architectural diagram showing main steps](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/main_steps.JPG)
+
 **Fig. 1 - Architectural diagram showing main steps performed in order to configure a cloud-based machine learning production model, 
 deploy it, and consume it.**
 source: Adapted from Nanodegree Program Machine Learning Engineer with Microsoft Azure
