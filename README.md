@@ -156,7 +156,7 @@ The following image we see that Swagger runs on localhost. There we see the HTTP
 **Fig. 15 - Swagger running on localhost**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/localhost_swagger03.JPG)
-**Fig. 16 - **
+**Fig. 16 - JSON payload.**
 
 ### Step 6: Consume model endpoints and benchmark endpoints
 
@@ -168,12 +168,12 @@ We also benchmark the endpoint using Apache Benchmark (ab) running `benchmark.sh
 The following image shows `endpoint.py` script runs against the API producing JSON output from the model, as well as `benchmark.sh` runs.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/endpoint_datajson_benchmark.JPG)
-**Fig. 17 - **
+**Fig. 17 - Output endpoint.py, data.json (obtained when running endpoint.py), and output of benchmark.sh.**
 
 In the following image we see the output of the Apache Benchmark.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/endpoint_datajson_benchmark_04.JPG)
-**Fig. 18 - **
+**Fig. 18 - Final part of the output when executing benchmark.sh**
 
 Here we can see, for instances, that it took 1.540 seconds for all the requests to go through and that there were no failed requests. In addition, it takes in average 154 ms per request which is much less than the limit given by Azure which is 60 seeconds.
 
