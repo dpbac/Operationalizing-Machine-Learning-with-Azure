@@ -147,6 +147,7 @@ To start we download the swagger json file for the deployed model. It can be fou
 Consume the deployed model using Swagger:
 
 **1. Download the swagger json file for the deployed model (Section Endpoints)**
+
 **2. Run swagger.sh and serve.py**
 
 The following image we see that Swagger runs on localhost. There we see the HTTP API methods and responses for the model.
