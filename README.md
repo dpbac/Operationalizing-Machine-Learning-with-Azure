@@ -116,7 +116,8 @@ The image bellow shows that `Applicatios Insights` are enabled.
 Then we can access logs output both at the command line as well as at Endpoints section in Azure ML Studio.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/logs_command_line.png)
-**Fig. 11 - Example output logs.py..**
+
+**Fig. 11 - Example output logs.py.**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/log01.JPG)
 **Fig. 12 - Output logs at Azure ML Studio.**
@@ -203,13 +204,14 @@ The pipeline includes all previous steps so we can see again the Bankmarketing d
 **Fig. 20 - Registered datasets.**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/details_dataset.JPG)
-**Details dataset**
+**Fig. 21 - Details dataset**
 
 **6. Train the model using AmlCompute**
 
 After training the model we can observe the following with the help of `Use RunDetails Widget`.
 [](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/run_details_widget.JPG)
-**Fig. 21 - Run details**
+
+**Fig. 22 - Run details**
 
 **7. Explore the results.**
 Here we retrieve metrics and the best model.
@@ -229,19 +231,24 @@ Additionally, publishing a pipeline, a public HTTP endpoint becomes available, a
 At `Published Pipeline overview`, we can seea REST endpoint and a status of ACTIVE.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/published_pipeline_active.JPG)
-**Fig. 22 -Published pipeline active**
+
+**Fig. 23 -Published pipeline active**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/published_pipeline_overview_RESTPOINT_ACTIVE.JPG)
-**Fig. 23 -Publish pipeline overview**
+
+**Fig. 24 -Publish pipeline overview**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/pipelines_endpoints.JPG)
-**Fig. 24 -Pipelines endpoints**
+
+**Fig. 25 -Pipelines endpoints**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/published_pipeline_schedule_run.JPG)
-**Fig. 25 -Schedule run**
+
+**Fig. 26 -Schedule run**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/run_details_widget.JPG)
-**Fig. 26 -Run details of published pipeline**
+
+**Fig. 27 -Run details of published pipeline**
 
 
 ## Screen Recording
