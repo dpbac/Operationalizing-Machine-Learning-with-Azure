@@ -105,6 +105,7 @@ In this step, we work on the logs.py provided and enable `Applications insights`
 This is a very important step since it allows to determine anomalities, irregularities and visualize the performance. 
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/logspy.JPG)
+
 **Fig. 9 - logs.py enabling Applications Insights.**
 
 The image bellow shows that `Applicatios Insights` are enabled.
