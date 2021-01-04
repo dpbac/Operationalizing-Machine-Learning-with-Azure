@@ -54,7 +54,7 @@ configure a compute cluster, and use that cluster to run the experiment.
 
 In this step we perform the following substeps:
 
-1. Initialize workspace.
+**1.** Initialize workspace.
 
 To start we need to initialize our workspace and create a Azule ML experiment.
 It is important to asure that the config file is present in the current working directory, i.e., at `.\config.json`. 
@@ -65,14 +65,14 @@ The config.json can be downloaded in the overview of Azure portal.
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/configure_json_edited.JPG)
 **Where to obtain config.json**
 
-2. Create an Azure ML experiment
-3. Create or Attach an AmlCompute cluster
-4. Load Dataset from https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv and make sure it is registered.
+**2.** Create an Azure ML experiment
+**3.** Create or Attach an AmlCompute cluster
+**4.** Load Dataset from https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv and make sure it is registered.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/registered_datasets.JPG)
 **Registered datasets.**
 
-5. Retrieve the best model.
+**5.** Retrieve the best model.
 
 When the Azure AutoML experiment is complete, we can retrieve the best model to use in the next step.
 
@@ -140,8 +140,8 @@ To start we download the swagger json file for the deployed model. It can be fou
 
 Consume the deployed model using Swagger:
 
-1. Download the swagger json file for the deployed model (Section Endpoints)
-2. Run swagger.sh and serve.py
+**1.** Download the swagger json file for the deployed model (Section Endpoints)
+**2.** Run swagger.sh and serve.py
 
 The following image we see that Swagger runs on localhost. There we see the HTTP API methods and responses for the model.
 
@@ -174,11 +174,11 @@ The best model is generated using AutoML for classifcation using the dataset ava
 
 In this notebook the following steps are performed:
 
-1. Create an `Experiment` in an existing `Workspace`.
-2. Create or Attach existing AmlCompute to a workspace.
-3. Define data loading in a `TabularDataset`.
-4. Configure AutoML using `AutoMLConfig`.
-5. Use AutoMLStep
+**1.** Create an `Experiment` in an existing `Workspace`.
+**2.** Create or Attach existing AmlCompute to a workspace.
+**3.** Define data loading in a `TabularDataset`.
+**4.** Configure AutoML using `AutoMLConfig`.
+**5.** Use AutoMLStep
 
 A pipeline is created using AutoMLStep. 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/pipelines_runs.JPG)
@@ -191,7 +191,7 @@ The pipeline includes all previous steps so we can see again the Bankmarketing d
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/details_dataset.JPG)
 **Details dataset**
 
-6. Train the model using AmlCompute
+**6.** Train the model using AmlCompute
 
 After training the model we can observe the following with the help of `Use RunDetails Widget`.
 [](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/run_details_widget.JPG)
