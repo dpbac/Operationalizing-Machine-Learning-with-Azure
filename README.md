@@ -37,11 +37,10 @@ source: Adapted from Nanodegree Program Machine Learning Engineer with Microsoft
 The following image shows the key steps listed above with some more detail.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/architectural_diagram.JPG)
-**Flow of operations of the complete project**
+**Fig. 2 - Flow of operations of the complete project**
 
 
 ## Key Steps
-*TODO*: Write a short discription of the key steps. Remeber to include all the screenshots required to demonstrate key steps. 
 
 ### Step 1: Authenticatication
 
@@ -55,7 +54,7 @@ configure a compute cluster, and use that cluster to run the experiment.
 
 In this step we perform the following substeps:
 
-**1.** Initialize workspace.
+**1. Initialize workspace.**
 
 To start we need to initialize our workspace and create a Azule ML experiment.
 It is important to asure that the config file is present in the current working directory, i.e., at `.\config.json`. 
@@ -64,24 +63,24 @@ It is important to asure that the config file is present in the current working 
 The config.json can be downloaded in the overview of Azure portal.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/configure_json_edited.JPG)
-**Where to obtain config.json**
+**Fig. 3 - Where to obtain config.json**
 
-**2.** Create an Azure ML experiment
-**3.** Create or Attach an AmlCompute cluster
-**4.** Load Dataset from https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv and make sure it is registered.
+**2. Create an Azure ML experiment**
+**3. Create or Attach an AmlCompute cluster**
+**4. Load Dataset from https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv and make sure it is registered.**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/registered_datasets.JPG)
-**Registered datasets.**
+**Fig. 4 - Registered datasets.**
 
-**5.** Retrieve the best model.
+**5. Retrieve the best model.**
 
 When the Azure AutoML experiment is complete, we can retrieve the best model to use in the next step.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/experiment_completed.JPG)
-**AutoML experiment completed**
+**Fig. 5 - AutoML experiment completed.**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/best_model.JPG)
-**Best model**
+**Fig. 6 - Best model.**
 
 From this last image we can see that the best model is `Voting Ensemble` with AUC weighted 0.9463.
 
@@ -90,10 +89,10 @@ From this last image we can see that the best model is `Voting Ensemble` with AU
 In this step we select the best model and deploy it enabling authentication and using Azure Container Instance (ACI) (see image bellow).
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/deploy_model.JPG)
-**Deploying the best model**
+** Fig. 7 - Deploying the best model.**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/model_deploy_succeed.JPG)
-**Model deployed with success**
+**Fig. 8 - Model deployed with success.**
 
 Deploying the Best Model will allow to interact with the HTTP API service and interact with the model by sending data over POST requests.
 
@@ -104,26 +103,28 @@ In this step, we work on the logs.py provided and enable `Applications insights`
 This is a very important step since it allows to determine anomalities, irregularities and visualize the performance. 
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/logspy.JPG)
-**logs.py enabling Applications Insights**
+**Fig. 9 - logs.py enabling Applications Insights.**
 
 The image bellow shows that `Applicatios Insights` are enabled.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/application_insights_enabled.JPG)
+**Fig. 10 - Applications Insights enabled.**
 
 Then we can access logs output both at the command line as well as at Endpoints section in Azure ML Studio.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/logs_command_line.png)
-**Example output logs.py**
+**Fig. 11 - Example output logs.py..**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/log01.JPG)
-**Output logs at Azure ML Studio**
+**Fig. 12 - Output logs at Azure ML Studio.**
 
 We can also get insights by checking the performance using the `Applications Insigth url`
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/insights_02.JPG)
+**Fig. 13 - View insights (1/2)**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/insights_03.JPG)
-
+**Fig. 14 - View insights (2/2)**
 
 ### Step 5: Swagger Documentation
 
@@ -141,14 +142,16 @@ To start we download the swagger json file for the deployed model. It can be fou
 
 Consume the deployed model using Swagger:
 
-**1.** Download the swagger json file for the deployed model (Section Endpoints)
-**2.** Run swagger.sh and serve.py
+**1. Download the swagger json file for the deployed model (Section Endpoints)**
+**2. Run swagger.sh and serve.py**
 
 The following image we see that Swagger runs on localhost. There we see the HTTP API methods and responses for the model.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/localhost_json.JPG)
+**Fig. 15 - **
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/localhost_swagger03.JPG)
+**Fig. 16 - **
 
 ### Step 6: Consume model endpoints and benchmark endpoints
 
@@ -160,10 +163,12 @@ We also benchmark the endpoint using Apache Benchmark (ab) running `benchmark.sh
 The following image shows `endpoint.py` script runs against the API producing JSON output from the model, as well as `benchmark.sh` runs.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/endpoint_datajson_benchmark.JPG)
+**Fig. 17 - **
 
 In the following image we see the output of the Apache Benchmark.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/endpoint_datajson_benchmark_04.JPG)
+**Fig. 18 - **
 
 Here we can see, for instances, that it took 1.540 seconds for all the requests to go through and that there were no failed requests. In addition, it takes in average 154 ms per request which is much less than the limit given by Azure which is 60 seeconds.
 
@@ -175,59 +180,61 @@ The best model is generated using AutoML for classifcation using the dataset ava
 
 In this notebook the following steps are performed:
 
-**1.** Create an `Experiment` in an existing `Workspace`.
-**2.** Create or Attach existing AmlCompute to a workspace.
-**3.** Define data loading in a `TabularDataset`.
-**4.** Configure AutoML using `AutoMLConfig`.
-**5.** Use AutoMLStep
+**1. Create an `Experiment` in an existing `Workspace`.**
+**2. Create or Attach existing AmlCompute to a workspace.**
+**3. Define data loading in a `TabularDataset`.**
+**4. Configure AutoML using `AutoMLConfig`.**
+**5. Use AutoMLStep**
 
 A pipeline is created using AutoMLStep. 
+ 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/pipelines_runs.JPG)
-**Pipeline created**
+**Fig. 19 - Pipeline created**
 
 The pipeline includes all previous steps so we can see again the Bankmarketing dataset with the AutoML module.
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/registered_datasets.JPG)
-**Registered datasets.**
+**Fig. 20 - Registered datasets.**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/details_dataset.JPG)
 **Details dataset**
 
-**6.** Train the model using AmlCompute
+**6. Train the model using AmlCompute**
 
 After training the model we can observe the following with the help of `Use RunDetails Widget`.
 [](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/run_details_widget.JPG)
-**Run details**
+**Fig. 21 - Run details**
 
-**7.** Explore the results.
+**7. Explore the results.**
 Here we retrieve metrics and the best model.
 
-**8.** Test the best fitted model.
+**8. Test the best fitted model.**
 Then we test the pipeline.
 
-**9.** Publish and run from REST endpoint
+**9. Publish and run from REST endpoint**
 
 Publishing a pipeline is the process of making a pipeline publicly available. Here we will use Python SDK to publish our pipeline.
 
-The following code publish the pipeline to your workspace. In your workspace in the portal, you can see metadata for the pipeline including run history and durations. You can also run the pipeline manually from the portal.
+The following code publish the pipeline to your workspace. In your workspace in the portal, you can see metadata for the pipeline including run history and durations. 
+You can also run the pipeline manually from the portal.
 
 Additionally, publishing a pipeline, a public HTTP endpoint becomes available, allowing other services, including external ones, to interact with an Azure Pipeline.
 
 At `Published Pipeline overview`, we can seea REST endpoint and a status of ACTIVE.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/published_pipeline_active.JPG)
-**Published pipeline active**
+**Fig. 22 -Published pipeline active**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/published_pipeline_overview_RESTPOINT_ACTIVE.JPG)
-**Publish pipeline overview**
+**Fig. 23 -Publish pipeline overview**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/pipelines_endpoints.JPG)
-**Pipelines endpoints**
+**Fig. 24 -Pipelines endpoints**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/published_pipeline_schedule_run.JPG)
-**Schedule run**
+**Fig. 25 -Schedule run**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/run_details_widget.JPG)
-**Run details of published pipeline**
+**Fig. 26 -Run details of published pipeline**
 
 
 ## Screen Recording
@@ -237,7 +244,7 @@ At `Published Pipeline overview`, we can seea REST endpoint and a status of ACTI
 
 * Try different methods to fight Unbalanced data.
 
-Unbalanced data: 88.80% label `no` and 11.20% label `yes`.
+Imbalanced data: 88.80% label `no` and 11.20% label `yes`.
 
 We can apply some techniques on the dataset to make the data more balanced before applying ML. **Automated ML** has built in capabilities to help deal with imbalanced. For instances, the algorithms used by automated ML detect imbalance when the number of samples in the minority class is equal to or fewer than 20% of the number of samples in the majority class, where minority class refers to the one with fewest samples and majority class refers to the one with most samples. Subsequently, AutoML will run an experiment with sub-sampled data to check if using class weights would remedy this problem and improve performance.
 
