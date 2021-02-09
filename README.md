@@ -58,27 +58,31 @@ In this step we perform the following substeps:
 
 **1. Initialize workspace.**
 
-To start we need to initialize our workspace and create a Azule ML experiment.
-It is important to asure that the config file is present in the current working directory, i.e., at `.\config.json`. 
-`config.json` can be downloaded from home of `Azure Machine Learning Studio`
-
-The config.json can be downloaded in the overview of Azure portal.
-
-![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/configure_json_edited.JPG)
-**Fig. 3 - Where to obtain config.json**
-
 **2. Create an Azure ML experiment**
 
 **3. Create or Attach an AmlCompute cluster**
 
 **4. Load Dataset from https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv and make sure it is registered.**
 
+**5. Retrieve the best model.**
+
+To start we need to initialize our `workspace` and `create a Azule ML experiment`.
+It is important to ensure that the config file is present in the current working directory, i.e., at `.\config.json`. 
+`config.json` can be downloaded from home of `Azure Machine Learning Studio`
+
+The `config.json` can be downloaded in the overview of Azure portal. The image below indicates were to find this file.
+
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/configure_json_edited.JPG)
+**Fig. 3 - Where to obtain config.json**
+
+Once you have all settled (Substeps 1 until 3). You are ready to load and register your BankMarketing dataset. The dataset is loaded using this [webaddress](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv).
+
+The following image shows that we successfuly registered our dataset containing the data that will be processed by Azure AutoML.
+
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/registered_datasets.JPG)
 **Fig. 4 - Registered datasets.**
 
-**5. Retrieve the best model.**
-
-When the Azure AutoML experiment is complete, we can retrieve the best model to use in the next step.
+Once the Azure AutoML experiment is complete `(Fig.5)`, we can retrieve the best model `(Fig.6)` to use in the next step.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/experiment_completed.JPG)
 **Fig. 5 - AutoML experiment completed.**
