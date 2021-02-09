@@ -205,31 +205,34 @@ notebook we start performing those steps (1-4) in addition to step 5 that is the
 
 **5. Use AutoMLStep**
 
-In `Fig. 19` we can verify that the pipeline was successfuly created. 
+In `Fig. 19` we can verify that the pipeline was successfuly created.
+<br/><br/>
  
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/pipelines_runs.JPG)
 **Fig. 19 - Pipeline created**
 
 The pipeline includes all previous steps so we can see again the Bankmarketing dataset with the AutoML module `(Fig. 20)`.
 <br/><br/>
+
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/registered_datasets.JPG)
 **Fig. 20 - Registered datasets.**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/details_dataset.JPG)
 **Fig. 21 - Details dataset**
 
-**6. Train the model using AmlCompute**
-
-After training the model we can observe the following with the help of `Use RunDetails Widget`.
-[](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/run_details_widget.JPG)
-
+Now we can train the model using `AmlCompute`. After training the model we can observe that the run was completed with the help of `Use RunDetails Widget` `(Fig. 22)`. 
+<br/><br/>
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/run_details_widget.JPG)
 **Fig. 22 - Run details**
 
-**7. Explore the results.**
-Here we retrieve metrics and the best model.
+Outputs of above run can be used as inputs of other steps in pipeline. 
 
-**8. Test the best fitted model.**
-Then we test the pipeline.
+Now we retrieve metrics and the best model.Then we test the pipeline. To see all metrics of all runs please check cell 2 of the 
+[notebook](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/auto-pipelines-with-ml-classification-bank-marketing.ipynb).
+
+Then we can use a test dataset to test our pipeline. The image below shows the confusion matrix obtained from our test.
+
+![]()
 
 **9. Publish and run from REST endpoint**
 
