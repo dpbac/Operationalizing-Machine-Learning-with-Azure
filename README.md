@@ -110,11 +110,9 @@ Deploying the Best Model will allow to interact with the HTTP API service and in
 
 ### Step 4: Enable logging
 
-In this step, we work on the logs.py provided and enable `Applications insights` using Azure SDK. 
+In this step, we work on the [logs.py](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/logs.py) provided and enable `Applications insights` using Azure SDK. This is a very important step since it allows to determine anomalities, irregularities and visualize the performance. The image below shows logs.py emphasizing the command that enables Application insights.
 
-This is a very important step since it allows to determine anomalities, irregularities and visualize the performance. 
-
-![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/logspy.JPG)
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/logspy2.JPG)
 
 **Fig. 9 - logs.py enabling Applications Insights.**
 
