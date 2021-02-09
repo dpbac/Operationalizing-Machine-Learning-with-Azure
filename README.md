@@ -211,7 +211,7 @@ In `Fig. 19` we can verify that the pipeline was successfuly created.
 **Fig. 19 - Pipeline created**
 
 The pipeline includes all previous steps so we can see again the Bankmarketing dataset with the AutoML module `(Fig. 20)`.
-<\b><\b>
+<br/><br/>
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/registered_datasets.JPG)
 **Fig. 20 - Registered datasets.**
 
