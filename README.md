@@ -130,7 +130,7 @@ Since `Applications Insights` is enabled we are able access logs output both at 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/log01.JPG)
 **Fig. 12 - Output logs at Azure ML Studio.**
 
-In addition, we can get insights by checking the performance using the `Applications Insigth url`. You can see in the following images that we can, for instances, get information about `Failed requests` and `Server response time`. With this type of information available we can quickly take action if something goes wrong.
+In addition, we can get insights by checking the performance using the `Applications Insigth url`. You can see in the following images `(Figs. 13 and 14)` that we can, for instances, get information about `Failed requests` and `Server response time`. With this type of information available we can quickly take action if something goes wrong.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/insights_02.JPG)
 **Fig. 13 - View insights (1/2)**
@@ -140,11 +140,9 @@ In addition, we can get insights by checking the performance using the `Applicat
 
 ### Step 5: Swagger Documentation
 
-In this step, you will consume the deployed model using `Swagger`. Azure provides a [Swagger](https://swagger.io/) JSON file for deployed models.
+In this step, we consume the deployed model using `Swagger`. Azure provides a [Swagger](https://swagger.io/) JSON file for deployed models. Consuming the deployed `Endpoints` allows other services to interact with deployed models.
 
-Here we will consume the deployed `Endpoints`. These endpoints allow other services to interact with deployed models.
-
-For this we will use Swagger, a tool that eases the documentation efforts of HTTP APIs. It helps build document and consume RESTful web services.
+For this we use Swagger, a tool that eases the documentation efforts of HTTP APIs. It helps building document and consuming RESTful web services.
 
 Azure provides swagger.json for deployed models. This file is used to create a web site that documents the HTTP endpoint for a deployed model.
 
@@ -152,7 +150,7 @@ To start we download the swagger json file for the deployed model. It can be fou
 
 **Important**: Make sure that [`swagger.json`](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/swagger/swagger.json) is at the same place of [`swagger.sh`](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/swagger/swagger.sh) and [`serve.py`](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/swagger/serve.py).
 
-To consume the deployed model using Swagger you need to:
+Summing up, to consume the deployed model using Swagger you need to:
 
 **1. Download the swagger json file for the deployed model (Section Endpoints)**
 
@@ -168,30 +166,34 @@ The following image we see that Swagger runs on localhost. There we see the HTTP
 
 ### Step 6: Consume model endpoints and benchmark endpoints
 
-Once the model is deployed, we use use `scoring_uri` and `key` in `endpoint.py` script so we can interact with the trained model. 
-`endpoint.py` runs against the API producing JSON output from the model (`data.json`).
+Once the model is deployed, we use `scoring_uri` and `key` in [`endpoint.py`](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/endpoint.py) script so we can interact with the trained model. 
 
-We also benchmark the endpoint using Apache Benchmark (ab) running `benchmark.sh` against the HTTP API using authentication keys to retrieve performance results.
+`endpoint.py` runs against the API producing JSON output from the model ([`data.json`](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/data.json)).
 
-The following image shows `endpoint.py` script runs against the API producing JSON output from the model, as well as `benchmark.sh` runs.
+We also `benchmark` the endpoint using `Apache Benchmark (ab)` running [`benchmark.sh`](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/benchmark.sh) against the HTTP API using authentication keys to retrieve performance results.
+
+The following image `(Fig.17)` shows `endpoint.py` script runs against the API producing JSON output from the model, as well as `benchmark.sh` runs.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/endpoint_datajson_benchmark.JPG)
 **Fig. 17 - Output endpoint.py, data.json (obtained when running endpoint.py), and output of benchmark.sh.**
 
-In the following image we see the output of the Apache Benchmark.
+Next we see the output of the Apache Benchmark `(Fig. 18)`.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/endpoint_datajson_benchmark_04.JPG)
 **Fig. 18 - Final part of the output when executing benchmark.sh**
 
-Here we can see, for instances, that it took 1.540 seconds for all the requests to go through and that there were no failed requests. In addition, it takes in average 154 ms per request which is much less than the limit given by Azure which is 60 seeconds.
+Here we can see, for instances, that it took **1.540 seconds** for all the requests to go through and that there were no failed requests. In addition, it takes on average **154 ms per request** which is much less than the limit given by Azure which is 60 seeconds.
 
 ### Step 7: Create and publish a pipeline
 
-At this step we run the [notebook](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/auto-pipelines-with-ml-classification-bank-marketing_01012021_run.ipynb) which creates, publishes and consumes a `Azure Machine Learning Pipeline with AutoMLStep`.
+In this section we show some details about the creation and publishing of a pipeline.
 
-The best model is generated using AutoML for classifcation using the dataset available at https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv
+For this in this project we run the [notebook](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/auto-pipelines-with-ml-classification-bank-marketing_01012021_run.ipynb) which creates, publishes and consumes a `Azure Machine Learning Pipeline with AutoMLStep`.
 
-In this notebook the following steps are performed:
+The best model is generated using AutoML for classification using the dataset available at https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv
+
+As explained at the begining of this README 5 steps are necessary until we get to our best model. Therefore, in this 
+notebook we start performing those steps (1-4) in addition to step 5 that is the responsable of creating the pipeline:
 
 **1. Create an `Experiment` in an existing `Workspace`.**
 
@@ -203,12 +205,13 @@ In this notebook the following steps are performed:
 
 **5. Use AutoMLStep**
 
-A pipeline is created using AutoMLStep. 
+In `Fig. 19` we can verify that the pipeline was successfuly created. 
  
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/pipelines_runs.JPG)
 **Fig. 19 - Pipeline created**
 
-The pipeline includes all previous steps so we can see again the Bankmarketing dataset with the AutoML module.
+The pipeline includes all previous steps so we can see again the Bankmarketing dataset with the AutoML module `(Fig. 20)`.
+<\b><\b>
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/registered_datasets.JPG)
 **Fig. 20 - Registered datasets.**
 
@@ -262,7 +265,7 @@ At `Published Pipeline overview`, we can seea REST endpoint and a status of ACTI
 
 ## Screen Recording
 
-:movie_camera: https://youtu.be/VQrKx7iRVMo
+:movie_camera: https://youtu.be/QMO7mhYaGGw
 
 ## Future work
 
