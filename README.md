@@ -110,18 +110,18 @@ Deploying the Best Model will allow to interact with the HTTP API service and in
 
 ### Step 4: Enable logging
 
-In this step, we work on the [logs.py](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/logs.py) provided and enable `Applications insights` using Azure SDK. This is a very important step since it allows to determine anomalities, irregularities and visualize the performance. The image below shows logs.py emphasizing the command that enables Application insights.
+In this step, we work on the [logs.py](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/logs.py) provided and enable `Applications insights` using Azure SDK. This is a very important step since it allows to determine anomalities, irregularities and visualize the performance. The image below `(Fig. 9)` shows logs.py emphasizing the command that enables Application insights.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/logspy2.JPG)
 
 **Fig. 9 - logs.py enabling Applications Insights.**
 
-The image bellow shows that `Applicatios Insights` are enabled.
+The next image `(Fig. 10)` shows that `Applicatios Insights` is indeed enabled.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/application_insights_enabled.JPG)
 **Fig. 10 - Applications Insights enabled.**
 
-Then we can access logs output both at the command line as well as at Endpoints section in Azure ML Studio.
+Since `Applications Insights` is enabled we are able access logs output both at the command line as well as at Endpoints section in Azure ML Studio. `Fig.11` shows logs at the command line, while `Fig. 12` shows logs at Azure ML Studio.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/logs_command_line.png)
 
@@ -130,7 +130,7 @@ Then we can access logs output both at the command line as well as at Endpoints 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/log01.JPG)
 **Fig. 12 - Output logs at Azure ML Studio.**
 
-We can also get insights by checking the performance using the `Applications Insigth url`
+In addition, we can get insights by checking the performance using the `Applications Insigth url`. You can see in the following images that we can, for instances, get information about `Failed requests` and `Server response time`. With this type of information available we can quickly take action if something goes wrong.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/insights_02.JPG)
 **Fig. 13 - View insights (1/2)**
@@ -140,19 +140,19 @@ We can also get insights by checking the performance using the `Applications Ins
 
 ### Step 5: Swagger Documentation
 
-In this step, you will consume the deployed model using Swagger. Azure provides a [Swagger](https://swagger.io/) JSON file for deployed models.
+In this step, you will consume the deployed model using `Swagger`. Azure provides a [Swagger](https://swagger.io/) JSON file for deployed models.
 
-Here we will consume the deployed Endpoints. These endpoints allow other services to interact with deployed models.
+Here we will consume the deployed `Endpoints`. These endpoints allow other services to interact with deployed models.
 
 For this we will use Swagger, a tool that eases the documentation efforts of HTTP APIs. It helps build document and consume RESTful web services.
 
 Azure provides swagger.json for deployed models. This file is used to create a web site that documents the HTTP endpoint for a deployed model.
 
-To start we download the swagger json file for the deployed model. It can be found in Section Endpoints. 
+To start we download the swagger json file for the deployed model. It can be found in Section Endpoints in Azure ML Studio. 
 
-**Important**: Make sure that `swagger.json` is at the same place of `swagger.sh` and `serve.py`.
+**Important**: Make sure that [`swagger.json`](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/swagger/swagger.json) is at the same place of [`swagger.sh`](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/swagger/swagger.sh) and [`serve.py`](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/swagger/serve.py).
 
-Consume the deployed model using Swagger:
+To consume the deployed model using Swagger you need to:
 
 **1. Download the swagger json file for the deployed model (Section Endpoints)**
 
