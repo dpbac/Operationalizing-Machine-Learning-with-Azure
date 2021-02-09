@@ -232,26 +232,24 @@ Now we retrieve metrics and the best model.Then we test the pipeline. To see all
 
 Then we can use a test dataset to test our pipeline. The image below shows the confusion matrix obtained from our test.
 
-![]()
+![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/confusion_matrix_test.JPG)
+**Fig. 23 - Confusion matrix result of testing the pipeline**
 
-**9. Publish and run from REST endpoint**
+Now we reach the point of publishing our pipeline. Publishing a pipeline is the process of making a pipeline publicly available. Here we will use `Python SDK` to publish our pipeline.
 
-Publishing a pipeline is the process of making a pipeline publicly available. Here we will use Python SDK to publish our pipeline.
-
-The following code publish the pipeline to your workspace. In your workspace in the portal, you can see metadata for the pipeline including run history and durations. 
-You can also run the pipeline manually from the portal.
-
+When published we can access in the workspace details about the pipeline and we can also run the pipeline manually from the portal.
 Additionally, publishing a pipeline, a public HTTP endpoint becomes available, allowing other services, including external ones, to interact with an Azure Pipeline.
 
-At `Published Pipeline overview`, we can seea REST endpoint and a status of ACTIVE.
+At `Published Pipeline overview`, we can see a REST endpoint and a status of ACTIVE `(Fig. 24)`.
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/published_pipeline_active.JPG)
 
-**Fig. 23 -Published pipeline active**
-
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/published_pipeline_overview_RESTPOINT_ACTIVE.JPG)
 
-**Fig. 24 -Publish pipeline overview**
+**Fig. 24 -Published pipeline active**
+
+In the last two images we can see, respectively, that our `pipeline endpoint` is active and details about the `pipeline endpoint` runs.
+
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/pipelines_endpoints.JPG)
 
@@ -261,11 +259,11 @@ At `Published Pipeline overview`, we can seea REST endpoint and a status of ACTI
 
 **Fig. 26 -Schedule run**
 
-![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/run_details_widget.JPG)
+<!-- ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/run_details_widget.JPG)
 
 **Fig. 27 -Run details of published pipeline**
 
-
+ -->
 ## Screen Recording
 
 :movie_camera: https://youtu.be/QMO7mhYaGGw
