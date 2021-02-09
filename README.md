@@ -68,7 +68,9 @@ The config.json can be downloaded in the overview of Azure portal.
 **Fig. 3 - Where to obtain config.json**
 
 **2. Create an Azure ML experiment**
+
 **3. Create or Attach an AmlCompute cluster**
+
 **4. Load Dataset from https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv and make sure it is registered.**
 
 ![](https://github.com/dpbac/Operationalizing-Machine-Learning-with-Azure/blob/master/images/registered_datasets.JPG)
